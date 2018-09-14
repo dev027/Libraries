@@ -15,7 +15,7 @@ namespace Utilities.Extensions.DateTimeExtensions
 
         public static DateTime ConvertToLocalTime(this DateTime utcDateTime, string timeZoneIdentity = null)
         {
-            var timeZoneInfo = timeZoneIdentity == null
+            TimeZoneInfo timeZoneInfo = timeZoneIdentity == null
                 ? TimeZoneInfo.Local
                 : TimeZoneInfo.FindSystemTimeZoneById(timeZoneIdentity);
 

@@ -27,7 +27,7 @@ namespace Utilities.Extensions.DateTimeExtensions
             if (localDateTime == DateTime.MaxValue) return Defaults.Forever;
             if (localDateTime == DateTime.MinValue) return Defaults.Always;
 
-            var daysInTheFuture = (int)(localDateTime.Date - DateTime.Today).TotalDays;
+            int daysInTheFuture = (int)(localDateTime.Date - DateTime.Today).TotalDays;
 
             switch (daysInTheFuture)
             {
