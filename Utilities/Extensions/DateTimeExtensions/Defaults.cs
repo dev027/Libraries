@@ -41,15 +41,45 @@
             string closeDateFormat = null,
             string timeFormat = null)
         {
-            if (forever != null) Defaults.Forever = forever;
-            if (always != null) Defaults.Always = always;
-            if (today != null) Defaults.Today = today;
-            if (tomorrow != null) Defaults.Tomorrow = tomorrow;
-            if (yesterday != null) Defaults.Yesterday = yesterday;
+            if (forever != null)
+            {
+                Defaults.Forever = forever;
+            }
 
-            if (distantDateFormat != null) Defaults.DistantDateFormat = distantDateFormat;
-            if (closeDateFormat != null) Defaults.CloseDateFormat = closeDateFormat;
-            if (timeFormat != null) Defaults.TimeFormat = timeFormat;
+            if (always != null)
+            {
+                Defaults.Always = always;
+            }
+
+            if (today != null)
+            {
+                Defaults.Today = today;
+            }
+
+            if (tomorrow != null)
+            {
+                Defaults.Tomorrow = tomorrow;
+            }
+
+            if (yesterday != null)
+            {
+                Defaults.Yesterday = yesterday;
+            }
+
+            if (distantDateFormat != null)
+            {
+                Defaults.DistantDateFormat = distantDateFormat;
+            }
+
+            if (closeDateFormat != null)
+            {
+                Defaults.CloseDateFormat = closeDateFormat;
+            }
+
+            if (timeFormat != null)
+            {
+                Defaults.TimeFormat = timeFormat;
+            }
         }
     }
 }

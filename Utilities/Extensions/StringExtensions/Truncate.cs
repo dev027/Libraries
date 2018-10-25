@@ -12,8 +12,15 @@ namespace Utilities.Extensions.StringExtensions
         /// <returns>Truncated string</returns>
         public static string Truncate(this string sourceString, int length)
         {
-            if (length < 0) throw new ArgumentOutOfRangeException(nameof(length), "Must be greater or equal to zero");
-            if (sourceString == null || length == 0 || sourceString.Length == 0) return string.Empty;
+            if (length < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(length), "Must be greater or equal to zero");
+            }
+
+            if (sourceString == null || length == 0 || sourceString.Length == 0)
+            {
+                return string.Empty;
+            }
 
             return sourceString.Substring(startIndex: 0, length: Math.Min(sourceString.Length, length));
         }

@@ -57,7 +57,10 @@ namespace Utilities.Extensions.StringExtensions
         /// </example>
         public static string FromProperCase(this string text, bool preserveAcronyms = true, string gap = " ")
         {
-            if (string.IsNullOrWhiteSpace(text)) return string.Empty;
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                return string.Empty;
+            }
 
             StringBuilder newText = new StringBuilder(text.Length * 2);
             newText.Append(text[0]);

@@ -15,7 +15,10 @@ namespace Utilities.Extensions.ListExtensions
         /// <returns>List as a string OR null if list is null</returns>
         public static string ToStringList<T>(this IList<T> list, string separator = ",")
         {
-            if (list == null) return null;
+            if (list == null)
+            {
+                return null;
+            }
 
             StringBuilder sb = new StringBuilder();
             foreach (var item in list)

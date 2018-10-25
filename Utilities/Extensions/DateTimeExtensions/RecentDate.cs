@@ -24,8 +24,15 @@ namespace Utilities.Extensions.DateTimeExtensions
             bool showTimeIfToday = false,
             string timeFormat = null)
         {
-            if (localDateTime == DateTime.MaxValue) return Defaults.Forever;
-            if (localDateTime == DateTime.MinValue) return Defaults.Always;
+            if (localDateTime == DateTime.MaxValue)
+            {
+                return Defaults.Forever;
+            }
+
+            if (localDateTime == DateTime.MinValue)
+            {
+                return Defaults.Always;
+            }
 
             int daysAgo = (int)(DateTime.Today - localDateTime.Date).TotalDays;
 

@@ -13,11 +13,27 @@ namespace Utilities.Extensions.StringExtensions
         /// <returns>String with replacement text</returns>
         public static string ReplaceFirstOccurrence(this string haystack, string oldNeedle, string newNeedle)
         {
-            if (string.IsNullOrEmpty(haystack)) return haystack;
-            if (string.IsNullOrEmpty(oldNeedle)) return haystack;
-            if (string.IsNullOrEmpty(newNeedle)) newNeedle = string.Empty;
+            if (string.IsNullOrEmpty(haystack))
+            {
+                return haystack;
+            }
+
+            if (string.IsNullOrEmpty(oldNeedle))
+            {
+                return haystack;
+            }
+
+            if (string.IsNullOrEmpty(newNeedle))
+            {
+                newNeedle = string.Empty;
+            }
+
             int pos = haystack.IndexOf(oldNeedle, StringComparison.Ordinal);
-            if (pos == -1) return haystack;
+            if (pos == -1)
+            {
+                return haystack;
+            }
+
             return haystack.Substring(0, pos) + newNeedle + haystack.Substring(pos + oldNeedle.Length);
         }
     }

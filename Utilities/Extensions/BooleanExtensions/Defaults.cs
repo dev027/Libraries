@@ -28,11 +28,25 @@
             string yes = null,
             string no = null)
         {
-            if (trueValue != null) Defaults.True = trueValue;
-            if (falseValue != null) Defaults.False = falseValue;
+            if (trueValue != null)
+            {
+                Defaults.True = trueValue;
+            }
 
-            if (yes != null) Defaults.Yes = yes;
-            if (no != null) Defaults.No = no;
+            if (falseValue != null)
+            {
+                Defaults.False = falseValue;
+            }
+
+            if (yes != null)
+            {
+                Defaults.Yes = yes;
+            }
+
+            if (no != null)
+            {
+                Defaults.No = no;
+            }
         }
     }
 }

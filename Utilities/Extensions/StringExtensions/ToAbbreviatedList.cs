@@ -29,7 +29,10 @@ namespace Utilities.Extensions.StringExtensions
             // If only one element then return it
             int count = list.Count;
 
-            if (count == 1) return list.First();
+            if (count == 1)
+            {
+                return list.First();
+            }
 
             // Build up the list of elements
             var sb = new StringBuilder(list.First());

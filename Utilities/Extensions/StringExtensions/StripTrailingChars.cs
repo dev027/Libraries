@@ -12,7 +12,10 @@ namespace Utilities.Extensions.StringExtensions
         /// <returns>Cleaned string</returns>
         public static string StripTrailingChars(this string stringToClean, char[] charsToStrip)
         {
-            if (stringToClean == null || charsToStrip.Length == 0) return stringToClean;
+            if (stringToClean == null || charsToStrip.Length == 0)
+            {
+                return stringToClean;
+            }
 
             int len = stringToClean.Length;
             while (len > 0 && charsToStrip.Contains(stringToClean[len - 1]))

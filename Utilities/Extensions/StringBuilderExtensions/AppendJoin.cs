@@ -32,7 +32,10 @@ namespace Utilities.Extensions.StringBuilderExtensions
         /// <param name="text">Strings to append</param>
         public static void AppendJoin(this StringBuilder sb, string join, string text)
         {
-            if (string.IsNullOrEmpty(text)) return;
+            if (string.IsNullOrEmpty(text))
+            {
+                return;
+            }
 
             if (sb.Length > 0)
             {

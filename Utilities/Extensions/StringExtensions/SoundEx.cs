@@ -26,7 +26,9 @@ namespace Utilities.Extensions.StringExtensions
 
             // Empty string => return "0000"
             if (string.IsNullOrEmpty(cleanWord))
+            {
                 return string.Empty.PadRight(maxSoundExCodeLength, '0');
+            }
 
             soundExCode.Append(cleanWord.First());
 
@@ -38,17 +40,23 @@ namespace Utilities.Extensions.StringExtensions
                 if (i == 1 &&
                     numberCharForCurrentLetter ==
                     GetCharNumberForLetter(soundExCode[0]))
+                {
                     continue;
+                }
 
                 if (soundExCode.Length > 2 && previousWasHorW &&
                     numberCharForCurrentLetter ==
                     soundExCode[soundExCode.Length - 2])
+                {
                     continue;
+                }
 
                 if (soundExCode.Length > 0 &&
                     numberCharForCurrentLetter ==
                     soundExCode[soundExCode.Length - 1])
+                {
                     continue;
+                }
 
                 soundExCode.Append(numberCharForCurrentLetter);
 
@@ -64,12 +72,35 @@ namespace Utilities.Extensions.StringExtensions
 
         private static char GetCharNumberForLetter(char letter)
         {
-            if ("BFPV".Contains(letter)) return '1';
-            if ("CGJKQSXZ".Contains(letter)) return '2';
-            if ("DT".Contains(letter)) return '3';
-            if ('L' == letter) return '4';
-            if ("MN".Contains(letter)) return '5';
-            if ('R' == letter) return '6';
+            if ("BFPV".Contains(letter))
+            {
+                return '1';
+            }
+
+            if ("CGJKQSXZ".Contains(letter))
+            {
+                return '2';
+            }
+
+            if ("DT".Contains(letter))
+            {
+                return '3';
+            }
+
+            if ('L' == letter)
+            {
+                return '4';
+            }
+
+            if ("MN".Contains(letter))
+            {
+                return '5';
+            }
+
+            if ('R' == letter)
+            {
+                return '6';
+            }
 
             return '0';
         }

@@ -15,7 +15,10 @@ namespace Utilities.Extensions.StringExtensions.Telephone
         /// </remarks>
         public static string ConvertInternationalTelephoneToLocalTelephone(this string internationalTelephone)
         {
-            if (!internationalTelephone.IsInternationalTelephone()) return internationalTelephone;
+            if (!internationalTelephone.IsInternationalTelephone())
+            {
+                return internationalTelephone;
+            }
 
             switch (internationalTelephone.Substring(1, 1))
             {
