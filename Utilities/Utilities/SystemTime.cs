@@ -67,16 +67,27 @@ namespace Utilities.Utilities
         public static DateTime Tomorrow => Today.AddDays(1);
 
         /// <summary>
-        /// Return datetime for 1st Jan 2000
+        /// Return DateTime for 1st Jan 2000
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public static DateTime Jan1st2000 = new DateTime(2000, 1, 1);
+
         /// <summary>
-        /// 
-        /// Return datetime for 5th Dec 2015 10.15am
+        /// Return DateTime for 5th Dec 2015 10.15am
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public static DateTime Dec5th2015Time1015 = new DateTime(2015, 12, 05, 10, 15, 00);
+
+        /// <summary>
+        /// Return DateTime for 31st Dec 2099
+        /// </summary>
+        // ReSharper disable once InconsistentNaming
+        public static DateTime Dec31st2099 = new DateTime(2099, 12, 31);
+
+        /// <summary>
+        /// Timestamp for audit messages: Local time of server
+        /// </summary>
+        public static DateTime AuditTimeStamp = Now;
 
         #endregion Public Properties
 
